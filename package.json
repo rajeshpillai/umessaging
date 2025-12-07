@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "websocket",
+    "chat",
+    "uWebSockets.js",
+    "demo"
+  ],
+  "author": "Antigravity",
   "license": "ISC",
-  "description": "",
+  "description": "A high-performance WebSocket chat demo using uWebSockets.js",
   "dependencies": {
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.48.0"
   }
