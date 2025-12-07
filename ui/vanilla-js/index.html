@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uChat - Fast & Secure</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="login-screen" class="screen active">
+        <div class="login-container">
+            <h1>uChat</h1>
+            <p>Welcome to the fastest chat app</p>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Your Name" required>
+                <input type="tel" id="mobile" placeholder="Mobile Number" required>
+                <button type="submit">Start Messaging</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="chat-screen" class="screen">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <div class="avatar" id="my-avatar"></div>
+                    <span id="my-name">Me</span>
+                </div>
+                <div class="actions">
+                    <button id="btn-logout" title="Logout"
+                        style="font-size: 0.8rem; width: auto; padding: 0 5px;">Logout</button>
+                    <button id="btn-new-group" title="New Group">+</button>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search" id="search-input">
+            </div>
+            <div class="section-header">My Chats</div>
+            <div class="chat-list" id="chat-list">
+                <!-- Chat items will go here -->
+            </div>
+            <div class="section-header">Available Groups</div>
+            <div class="chat-list" id="available-groups-list">
+                <!-- Available groups here -->
+            </div>
+            <div class="section-header">Online Users</div>
+            <div class="chat-list" id="online-users-list">
+                <!-- Online users here -->
+            </div>
+        </div>
+        <div class="main-chat">
+            <div class="chat-header" id="current-chat-header" style="display: none;">
+                <div class="chat-info">
+                    <h3 id="chat-title">Select a chat</h3>
+                    <span id="chat-status"></span>
+                </div>
+            </div>
+            <div class="messages-container" id="messages-container">
+                <div class="placeholder-text">Select a chat to start messaging</div>
+            </div>
+            <div class="input-area" id="input-area" style="display: none;">
+                <input type="text" id="message-input" placeholder="Write a message...">
+                <button id="send-btn">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-new-chat" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Start New Chat</h2>
+            <input type="tel" id="new-chat-mobile" placeholder="Enter Mobile Number">
+            <button id="btn-start-chat">Chat</button>
+        </div>
+    </div>
+
+    <div id="modal-new-group" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create New Group</h2>
+            <input type="text" id="new-group-name" placeholder="Group Name">
+            <button id="btn-create-group">Create</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
